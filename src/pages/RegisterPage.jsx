@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StatusBar from "../components/StatusBar";
 
-import "./RegisterPage.css";
+import "../styles/RegisterPage.css";
 import call from "../assets/call.svg";
 import lock from "../assets/lock.svg";
 

@@ -1,33 +1,35 @@
 import React from "react";
-import StatusBar from "../components/StatusBar.jsx";
+import "../styles/HomePage.css";
 
-const HomeScreen = () => {
+const HomePage = () => {
   return (
-    <div className="screen home-screen">
-      <StatusBar />
-
+    <div className="home-container">
+      
+      {/* HEADER */}
       <div className="home-header">
-        <h1>morago</h1>
+        <h2 className="logo">morago</h2>
+        <div className="profile-icon"></div>
       </div>
 
-      <div className="home-balance">
-        <p>My balance</p>
-        <h2>50,000</h2>
+      {/* BALANCE CARD */}
+      <div className="balance-card">
+        <div className="balance-top">
+          <span>My balance</span>
+          <span className="top-up">Top up</span>
+        </div>
+
+        <div className="balance-amount">
+          50,000
+        </div>
       </div>
 
-      <button className="btn btn-call">
+      {/* CTA BUTTON */}
+      <button className="call-button">
         Select a translator and call
       </button>
 
-      <div className="home-topics">
-        <h3>Popular translation topics</h3>
-      </div>
-
-      <div className="home-recent">
-        <h3>My recent calls</h3>
-      </div>
     </div>
   );
 };
 
-export default HomeScreen;
+export default HomePage;

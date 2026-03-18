@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import StatusBar from "../components/StatusBar.jsx";
 import { register } from "../services/auth";
 
-import "./VerificationCodePage.css";
+import "../styles/VerificationCodePage.css";
 
 const VerificationCodePage = () => {
   const navigate = useNavigate();
