@@ -1,0 +1,387 @@
+/* =========================
+   HOME PAGE WRAPPER
+   ========================= */
+.home-page {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =========================
+   TOP HERO SECTION
+   - teal background area
+   - status bar
+   - logo/header
+   - balance card
+   - CTA button
+   ========================= */
+.home-top-section {
+  position: relative;
+  min-height: 255px;
+  padding: 52px 16px 24px;
+  overflow: hidden;
+}
+
+/* Background image layer */
+.home-top-bg {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Keep everything except the background above it */
+.home-top-section > :not(.home-top-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   HOME-ONLY STATUS BAR
+   - absolute at the top
+   - white icons/text only on Home
+   ========================= */
+.home-status-bar {
+  position: absolute;
+  top: -20px; 
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Override global status bar only on Home */
+.home-status-bar .status-bar {
+  height: 44px;
+  padding: 0 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.home-status-bar .status-time {
+  color: #ffffff;
+}
+
+/* Signal bars */
+.home-status-bar .icon-signal span {
+  background: #ffffff;
+}
+
+/* Wifi icon is using data-image, so invert it */
+.home-status-bar .icon-wifi-filled {
+  filter: brightness(0) invert(1);
+}
+
+/* Battery parts */
+.home-status-bar .battery-body {
+  border: 1.5px solid #ffffff;
+}
+
+.home-status-bar .battery-level {
+  background: #ffffff;
+}
+
+.home-status-bar .battery-cap {
+  background: #ffffff;
+}
+
+/* =========================
+   HEADER
+   - centered logo
+   - notification button on right
+   ========================= */
+.home-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 28px;
+}
+
+.home-logo {
+  margin: 0;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.notification-button {
+  position: absolute;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-button img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* =========================
+   BALANCE CARD
+   ========================= */
+.balance-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin-bottom: 16px;
+}
+
+.balance-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.balance-label {
+  font-size: 11px;
+  color: #a0a7b4;
+}
+
+.top-up-button {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0;
+}
+
+.top-up-button img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.balance-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coin-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.balance-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.balance-minutes {
+  font-size: 11px;
+  color: #b1b7c3;
+}
+
+/* =========================
+   MAIN CTA BUTTON
+   ========================= */
+.call-button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: #f2f500;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN CONTENT AREA
+   ========================= */
+.home-content {
+  flex: 1;
+  min-height: 0;
+  background: #ffffff;
+  padding: 18px 16px 24px;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.home-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* =========================
+   TOPICS SECTION
+   ========================= */
+.topics-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 90px); 
+  justify-content: center;
+  gap: 30px;   
+}
+
+.topic-card {
+  background: #ffffff;
+  border: 1px solid #eef0f4;
+  border-radius: 12px;
+  min-height: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 15px 6px;
+  cursor: pointer;
+}
+
+.topic-card img,
+.topic-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.topic-name {
+  font-size: 12px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* =========================
+   RECENT CALLS SECTION
+   ========================= */
+.recent-calls-section {
+  margin-bottom: 24px;
+}
+
+.recent-calls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-call-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #eef0f4;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.recent-call-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #d9d9d9;
+  flex-shrink: 0;
+}
+
+.recent-call-info {
+  flex: 1;
+}
+
+.recent-call-name {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.recent-call-topic {
+  margin: 0;
+  font-size: 12px;
+  color: #9aa3af;
+}
+
+.recent-call-meta {
+  text-align: right;
+}
+
+.recent-call-rating {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #f5b301;
+}
+
+.recent-call-time {
+  margin: 0;
+  font-size: 12px;
+  color: #9aa3af;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+   ========================= */
+.bottom-nav {
+  background: #ffffff;
+  border-top: 1px solid #eef0f4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px 12px 24px;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #a0a7b4;
+  cursor: pointer;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.nav-item-active {
+  color: #1f2937;
+}
+
+.home-indicator {
+  width: 120px;
+  height: 5px;
+  background: #000;
+  border-radius: 999px;
+  margin: 8px auto 5px;
+}

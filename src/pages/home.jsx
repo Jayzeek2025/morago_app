@@ -1,22 +1,23 @@
 import React from "react";
+import StatusBar from "../components/StatusBar.jsx";
 import "../styles/HomePage.css";
 
 import homeBg from "../assets/userBackground.svg";
-import profileIcon from "../assets/bank.svg";
-import coinIcon from "../assets/bank.svg";
-import plusIcon from "../assets/bank.svg";
+import notificationIcon from "../assets/notification.svg";
+import coinIcon from "../assets/coin.svg";
+import plusIcon from "../assets/topUp.svg";
 
 import bankIcon from "../assets/bank.svg";
 import taxiIcon from "../assets/taxi.svg";
 import mailIcon from "../assets/mail.svg";
-import documentsIcon from "../assets/others.svg";
+import documentsIcon from "../assets/documents.svg";
 import financesIcon from "../assets/finances.svg";
 import othersIcon from "../assets/others.svg";
 
-import homeIcon from "../assets/bank.svg";
-import callsIcon from "../assets/bank.svg";
-import messagesIcon from "../assets/bank.svg";
-import profileNavIcon from "../assets/bank.svg";
+import homeIcon from "../assets/home.svg";
+import callsIcon from "../assets/calls.svg";
+import messagesIcon from "../assets/message.svg";
+import profileNavIcon from "../assets/profile.svg";
 
 const recentCalls = [
   {
@@ -53,15 +54,18 @@ const topics = [
 
 const HomePage = () => {
   return (
-    <div
-      className="home-page"
-      style={{ backgroundImage: `url(${homeBg})` }}
-    >
+    <div className="home-page">
       <div className="home-top-section">
+        <img src={homeBg} alt="" className="home-top-bg" />
+
+        <div className="home-status-bar">
+          <StatusBar />
+        </div>
+
         <header className="home-header">
           <h1 className="home-logo">morago</h1>
-          <button className="profile-button" type="button">
-            <img src={profileIcon} alt="Profile" />
+          <button className="notification-button" type="button">
+            <img src={notificationIcon} alt="Notification" />
           </button>
         </header>
 
@@ -145,6 +149,7 @@ const HomePage = () => {
           <span>Profile</span>
         </button>
       </nav>
+      <div className="home-indicator"></div>
     </div>
   );
 };
