@@ -2,7 +2,7 @@ import React from "react";
 import StatusBar from "../components/StatusBar.jsx";
 import { useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
-import "./SelectTopic.jsx";
+import "./SelectedTopicPage.jsx";
 
 import homeBg from "../assets/userBackground.svg";
 import notificationIcon from "../assets/notification.svg";
@@ -17,6 +17,7 @@ import financesIcon from "../assets/finances.svg";
 import othersIcon from "../assets/others.svg";
 
 import homeIcon from "../assets/home.svg";
+import homeIconActive from "../assets/home-active.svg";
 import callsIcon from "../assets/calls.svg";
 import messagesIcon from "../assets/message.svg";
 import profileNavIcon from "../assets/profile.svg";
@@ -58,7 +59,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleTopicClick = (topic) => {
-    navigate("/SelectTopic", {
+    navigate("/SelectedTopicPage", {
       state: { selectedTopic: topic },
     });
   };
@@ -161,7 +162,7 @@ const HomePage = () => {
 
       <nav className="bottom-nav">
         <button className="nav-item nav-item-active" type="button">
-          <img src={homeIcon} alt="Home" />
+          <img src={homeIconActive} alt="Home" />
           <span>Home</span>
         </button>
 

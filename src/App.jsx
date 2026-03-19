@@ -15,7 +15,7 @@ import ForgotPasswordNewPasswordPage from "./pages/ForgotPasswordNewPasswordPage
 
 import HomeScreen from "./pages/home.jsx";
 import TopUpPage from "./pages/TopUpPage";
-import SelectTopic from "./pages/SelectTopic.jsx";
+import SelectedTopic from "./pages/SelectedTopicPage.jsx";
 import MyCallsPage from "./pages/MyCallsPage";
 import ProfilePage from "./pages/ProfilePage";
 
@@ -41,7 +41,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="/SelectTopic" element={<SelectTopic />} />
+          <Route path="/SelectedTopicPage" element={<SelectedTopic />} />
           <Route path="/top-up" element={<TopUpPage />} />
           <Route path="/my-calls" element={<MyCallsPage />} />
           <Route path="/profile" element={<ProfilePage />} />

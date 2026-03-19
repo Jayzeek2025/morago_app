@@ -374,8 +374,12 @@
   object-fit: contain;
 }
 
-.nav-item-active {
-  color: #1f2937;
+.nav-item-active img {
+  filter: brightness(0);
+}
+
+.nav-item-active span {
+  color: #000000;
 }
 
 .home-indicator {

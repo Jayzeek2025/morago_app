@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+
 import homeIcon from "../assets/home.svg";
-import callsIcon from "../assets/calls.svg";
+import callsIconActive from "../assets/Phone-active.svg";
 import messagesIcon from "../assets/message.svg";
 import profileNavIcon from "../assets/profile.svg";
 
@@ -102,7 +103,7 @@ const MyCallsPage = () => {
         </button>
 
         <button className="nav-item nav-item-active" type="button">
-          <img src={callsIcon} alt="My calls" />
+          <img src={callsIconActive} alt="My calls" />
           <span>My calls</span>
         </button>
 

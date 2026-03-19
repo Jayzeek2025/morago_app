@@ -2,7 +2,7 @@ import React from "react";
 import homeIcon from "../assets/home.svg";
 import callsIcon from "../assets/calls.svg";
 import messagesIcon from "../assets/message.svg";
-import profileNavIcon from "../assets/profile.svg";
+import profileNavIconActive from "../assets/profile-active.svg";
 
 const ProfilePage = () => {
   return (
@@ -75,7 +75,7 @@ const ProfilePage = () => {
         </button>
 
         <button className="nav-item nav-item-active" type="button">
-          <img src={profileNavIcon} alt="Profile" />
+          <img src={profileNavIconActive} alt="Profile" />
           <span>Profile</span>
         </button>
       </nav>
