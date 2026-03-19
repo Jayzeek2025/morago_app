@@ -1,0 +1,185 @@
+/* Page */
+.my-calls-page {
+  height: 100%;
+  background: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.my-calls-header {
+  height: 118px;
+  background: #005f78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.my-calls-logo {
+  margin: 28px 0 0;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Content */
+.my-calls-content {
+  flex: 1;
+  min-height: 0;
+  padding: 18px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tabs */
+.my-calls-tabs {
+  display: flex;
+  align-items: center;
+  background: #e9e9ed;
+  border-radius: 8px;
+  padding: 2px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+.tab-button {
+  flex: 1;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #1e2235;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Section */
+.my-calls-section {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-calls-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e2235;
+  flex-shrink: 0;
+}
+
+/* List */
+.my-calls-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.my-calls-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.my-call-card {
+  background: #ffffff;
+  border: 1px solid #ececf2;
+  border-radius: 16px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  flex-shrink: 0;
+}
+
+.my-call-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d9d9d9, #bfc4cc);
+  flex-shrink: 0;
+}
+
+.my-call-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-call-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.my-call-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e2235;
+}
+
+.my-call-topic {
+  margin: 0;
+  font-size: 14px;
+  color: #a0a7b4;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-dot.red {
+  background: #d40000;
+}
+
+.status-dot.green {
+  background: #52b000;
+}
+
+.my-call-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.my-call-date {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #b3b9c5;
+}
+
+.my-call-duration {
+  margin: 0;
+  font-size: 13px;
+  color: #b3b9c5;
+}
+
+/* Bottom nav */
+.my-calls-page .bottom-nav {
+  flex-shrink: 0;
+}
+
+.my-calls-page .home-indicator {
+  flex-shrink: 0;
+}

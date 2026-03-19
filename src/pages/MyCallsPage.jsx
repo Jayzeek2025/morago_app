@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/MyCallsPage.css";
 
 import homeIcon from "../assets/home.svg";
 import callsIconActive from "../assets/Phone-active.svg";
