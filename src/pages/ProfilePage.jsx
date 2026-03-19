@@ -1,4 +1,6 @@
 import React from "react";
+import "../styles/ProfilePage.css";
+
 import homeIcon from "../assets/home.svg";
 import callsIcon from "../assets/calls.svg";
 import messagesIcon from "../assets/message.svg";
@@ -11,7 +13,9 @@ const ProfilePage = () => {
         <h1 className="profile-title">My Profile</h1>
 
         <div className="profile-user-card">
-          <div className="profile-avatar"></div>
+          <div className="profile-avatar">
+            <div className="profile-avatar-placeholder"></div>
+          </div>
 
           <div className="profile-user-info">
             <p className="profile-name">First and Last Name</p>
