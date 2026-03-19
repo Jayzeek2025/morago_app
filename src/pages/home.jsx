@@ -1,6 +1,8 @@
 import React from "react";
 import StatusBar from "../components/StatusBar.jsx";
+import { useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
+import "./SelectTopic.jsx";
 
 import homeBg from "../assets/userBackground.svg";
 import notificationIcon from "../assets/notification.svg";
@@ -53,6 +55,14 @@ const topics = [
 ];
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleTopicClick = (topic) => {
+    navigate("/SelectTopic", {
+      state: { selectedTopic: topic },
+    });
+  };
+
   return (
     <div className="home-page">
       <div className="home-top-section">
@@ -97,7 +107,14 @@ const HomePage = () => {
 
           <div className="topics-grid">
             {topics.map((topic) => (
-              <button key={topic.id} className="topic-card" type="button">
+
+              <button
+                key={topic.id}
+                className="topic-card"
+                type="button"
+                onClick={() => handleTopicClick(topic)}
+              >
+
                 <img src={topic.icon} alt={topic.name} className="topic-icon" />
                 <span className="topic-name">{topic.name}</span>
               </button>

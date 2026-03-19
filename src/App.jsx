@@ -14,6 +14,8 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage.jsx";
 import ForgotPasswordVerifyPage from "./pages/ForgotPasswordVerifyPage.jsx";
 import ForgotPasswordNewPasswordPage from "./pages/ForgotPasswordNewPasswordPage.jsx";
 
+import SelectTopic from "./pages/SelectTopic.jsx";
+
 /* ------------------------- APP MAIN ------------------------- */
 const App = () => {
   return (
@@ -32,6 +34,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route path="/SelectTopic" element={<SelectTopic />} />
 
           <Route
             path="/translator-home"
@@ -41,6 +44,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          
 
           <Route path="/sign-up/user" element={<RegisterPage role="user" />} />
           <Route
