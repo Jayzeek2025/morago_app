@@ -5,8 +5,7 @@ import SplashScreen from "./components/SplashScreen.jsx";
 import LoginScreen from "./pages/login.jsx";
 import SignupScreen from "./pages/sign-up.jsx";
 import OnboardingScreen from "./pages/onboarding.jsx";
-import HomeScreen from "./pages/home.jsx";
-import TranslatorHome from "./pages/translator-home.jsx";
+
 import RegisterPage from "./pages/RegisterPage";
 import VerificationCodePage from "./pages/VerificationCodePage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
@@ -14,7 +13,14 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage.jsx";
 import ForgotPasswordVerifyPage from "./pages/ForgotPasswordVerifyPage.jsx";
 import ForgotPasswordNewPasswordPage from "./pages/ForgotPasswordNewPasswordPage.jsx";
 
+import HomeScreen from "./pages/home.jsx";
+import TopUpPage from "./pages/TopUpPage";
 import SelectTopic from "./pages/SelectTopic.jsx";
+import MyCallsPage from "./pages/MyCallsPage";
+import ProfilePage from "./pages/ProfilePage";
+
+import TranslatorHome from "./pages/translator-home.jsx";
+
 
 /* ------------------------- APP MAIN ------------------------- */
 const App = () => {
@@ -26,6 +32,7 @@ const App = () => {
           <Route path="/onboarding" element={<OnboardingScreen />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/sign-up" element={<SignupScreen />} />
+
           <Route
             path="/home"
             element={
@@ -35,6 +42,9 @@ const App = () => {
             }
           />
           <Route path="/SelectTopic" element={<SelectTopic />} />
+          <Route path="/top-up" element={<TopUpPage />} />
+          <Route path="/my-calls" element={<MyCallsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
 
           <Route
             path="/translator-home"

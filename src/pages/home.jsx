@@ -63,6 +63,18 @@ const HomePage = () => {
     });
   };
 
+  const handleTopUpClick = () => {
+    navigate("/top-up");
+  };
+
+  const handleMyCallsClick = () => {
+    navigate("/my-calls");
+  };
+
+  const handleProfileClick = () => {
+    navigate("/profile");
+  };
+
   return (
     <div className="home-page">
       <div className="home-top-section">
@@ -83,7 +95,11 @@ const HomePage = () => {
           <div className="balance-card-top">
             <span className="balance-label">My balance</span>
 
-            <button className="top-up-button" type="button">
+            <button
+              className="top-up-button"
+              type="button"
+              onClick={handleTopUpClick}
+            >
               <span>Top up</span>
               <img src={plusIcon} alt="Top up" />
             </button>
@@ -107,14 +123,12 @@ const HomePage = () => {
 
           <div className="topics-grid">
             {topics.map((topic) => (
-
               <button
                 key={topic.id}
                 className="topic-card"
                 type="button"
                 onClick={() => handleTopicClick(topic)}
               >
-
                 <img src={topic.icon} alt={topic.name} className="topic-icon" />
                 <span className="topic-name">{topic.name}</span>
               </button>
@@ -151,7 +165,7 @@ const HomePage = () => {
           <span>Home</span>
         </button>
 
-        <button className="nav-item" type="button">
+        <button className="nav-item" type="button" onClick={handleMyCallsClick}>
           <img src={callsIcon} alt="My calls" />
           <span>My calls</span>
         </button>
@@ -161,7 +175,7 @@ const HomePage = () => {
           <span>Messages</span>
         </button>
 
-        <button className="nav-item" type="button">
+        <button className="nav-item" type="button" onClick={handleProfileClick}>
           <img src={profileNavIcon} alt="Profile" />
           <span>Profile</span>
         </button>
