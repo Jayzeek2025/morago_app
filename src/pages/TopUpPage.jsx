@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/TopUpPage.css";
+import coinIcon from "../assets/coin.svg";
 
 const amounts = ["10,000 won", "30,000 won", "50,000 won", "100,000 won"];
 
@@ -72,10 +74,15 @@ const TopUpPage = () => {
                 }`}
                 onClick={() => setSelectedAmount(amount)}
               >
-                <span className="top-up-amount-text">{amount}</span>
+                <div className="top-up-amount-left">
+                  <img src={coinIcon} alt="" className="top-up-coin-icon" />
+                  <span className="top-up-amount-text">{amount}</span>
+                </div>
+
                 {selectedAmount === amount && (
                   <span className="top-up-checkmark">✓</span>
                 )}
+                
               </button>
             ))}
           </div>

@@ -16,7 +16,6 @@ import documentsIcon from "../assets/documents.svg";
 import financesIcon from "../assets/finances.svg";
 import othersIcon from "../assets/others.svg";
 
-import homeIcon from "../assets/home.svg";
 import homeIconActive from "../assets/home-active.svg";
 import callsIcon from "../assets/calls.svg";
 import messagesIcon from "../assets/message.svg";
