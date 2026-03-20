@@ -49,7 +49,7 @@ const AdminForgotPasswordPage = () => {
 
   return (
     <div className="admin-forgot-page">
-      <AdminHeader />
+      <AdminHeader showProfile={false} />
       <div className="admin-forgot-container">
         <div className="admin-forgot-card">
           <h1 className="admin-forgot-title">Request pass</h1>

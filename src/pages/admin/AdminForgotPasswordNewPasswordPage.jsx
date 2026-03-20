@@ -56,7 +56,7 @@ const AdminForgotPasswordNewPasswordPage = () => {
 
   return (
     <div className="admin-forgot-page">
-      <AdminHeader />
+      <AdminHeader showProfile={false} />
 
       <div className="admin-forgot-container">
         <div className="admin-forgot-card">
