@@ -85,6 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.5;
 }
 
 .admin-table-eye-icon {
@@ -93,4 +94,5 @@
   object-fit: contain;
   display: block;
   filter: brightness(0);
+  cursor: pointer;
 }
