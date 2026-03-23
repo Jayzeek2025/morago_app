@@ -8,6 +8,7 @@ const AdminPageShell = ({
   breadcrumbSection,
   breadcrumbPage,
   children,
+  showControls = true,
 }) => {
   return (
     <section className="admin-page-shell">
@@ -24,9 +25,11 @@ const AdminPageShell = ({
           </div>
         </div>
 
-        <div className="admin-page-shell-right">
-          <AdminControls />
-        </div>
+        {showControls && (
+          <div className="admin-page-shell-right">
+            <AdminControls />
+          </div>
+        )}
       </div>
 
       <div className="admin-page-shell-body">{children}</div>

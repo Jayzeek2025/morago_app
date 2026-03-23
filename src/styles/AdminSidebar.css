@@ -1,6 +1,8 @@
 .admin-sidebar {
   width: 428px;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
+  position: sticky;
+  top: 100px;
   background: #ffffff;
   border-right: 1px solid #d9d9d9;
   display: flex;
@@ -17,7 +19,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.sidebar-section + .sidebar-section {
+.sidebar-section+.sidebar-section {
   margin-top: 40px;
   border-bottom: none;
 }
