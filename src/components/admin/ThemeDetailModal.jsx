@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import eyeIcon from "../../assets/eye.svg";
+import defaultAvatar from "../../assets/avatar.svg";
 import "../../styles/Admin/ThemesPages/ThemeDetailModal.css";
 
-const ThemeDetailModal = ({ theme, loading, error, onClose }) => {
+const ThemeDetailModal = ({ theme, loading, error, onClose, onDelete }) => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -17,21 +18,40 @@ const ThemeDetailModal = ({ theme, loading, error, onClose }) => {
     };
   }, [onClose]);
 
+  const handleDelete = async () => {
+    if (!theme?.id) return;
+
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this theme?",
+    );
+    if (!confirmed) return;
+
+    await onDelete(theme.id);
+    onClose();
+  };
+
   if (!theme && !loading && !error) return null;
 
   const categoryName = theme?.categoryName || "-";
 
   return (
-    <div className="morago-theme-detail-modal__overlay" onClick={onClose}>
+    <div
+      className="morago-theme-detail-modal__overlay"
+      onClick={onClose}
+      aria-label="Close theme modal overlay"
+    >
       <div
         className="morago-theme-detail-modal"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Theme details modal"
       >
         <button
           type="button"
           className="morago-theme-detail-modal__close"
           onClick={onClose}
-          aria-label="Close"
+          aria-label="Close modal"
         >
           ×
         </button>
@@ -51,12 +71,15 @@ const ThemeDetailModal = ({ theme, loading, error, onClose }) => {
                     src={theme.iconUrl}
                     alt={theme.title || theme.name}
                     className="morago-theme-detail-modal__image"
+                    onError={(e) => {
+                      e.currentTarget.src = defaultAvatar;
+                    }}
                   />
                 ) : (
                   <div className="morago-theme-detail-modal__image-placeholder">
                     <img
                       src={eyeIcon}
-                      alt="theme"
+                      alt="theme placeholder"
                       className="morago-theme-detail-modal__placeholder-icon"
                     />
                   </div>
@@ -69,15 +92,18 @@ const ThemeDetailModal = ({ theme, loading, error, onClose }) => {
                 <button
                   type="button"
                   className="morago-theme-detail-modal__action-btn"
+                  aria-label="Edit theme"
                 >
                   Edit <span>→</span>
                 </button>
 
                 <button
                   type="button"
-                  className="morago-theme-detail-modal__action-btn"
+                  className="morago-theme-detail-modal__delete-btn"
+                  onClick={handleDelete}
+                  aria-label="Delete theme"
                 >
-                  Status <span>⚙</span>
+                  Delete
                 </button>
               </div>
             </div>

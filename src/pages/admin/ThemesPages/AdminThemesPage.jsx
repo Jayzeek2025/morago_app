@@ -9,6 +9,7 @@ import { defaultThemeColumns } from "../../../components/admin/DefaultThemeColum
 import {
   getAdminThemes,
   getAdminThemeById,
+  deleteAdminTheme,
 } from "../../../services/adminThemes.ts";
 import { getAdminCategoryById } from "../../../services/adminCategory.ts";
 
@@ -153,6 +154,26 @@ const AdminThemesPage = () => {
     setThemeDetailLoading(false);
   };
 
+  const handleDeleteTheme = async (id) => {
+    try {
+      await deleteAdminTheme(id);
+
+      setThemes((prev) => prev.filter((t) => t.id !== id));
+
+      handleCloseThemeModal();
+    } catch (apiError) {
+      console.error("Failed to delete theme:", apiError);
+
+      const backendMessage =
+        apiError?.message ||
+        apiError?.details?.error ||
+        apiError?.details?.message ||
+        "Failed to delete theme";
+
+      setThemeDetailError(backendMessage);
+    }
+  };
+
   const handleControlsApply = ({ search, filter, action }) => {
     if (action === "show-all") {
       setPage(0);
@@ -249,6 +270,7 @@ const AdminThemesPage = () => {
             loading={themeDetailLoading}
             error={themeDetailError}
             onClose={handleCloseThemeModal}
+            onDelete={handleDeleteTheme}
           />
         )}
       </AdminPageShell>
